@@ -11,7 +11,7 @@ interface Props {//probs type
 }
 
 const Movies = ({ movies, addMovie, removeMovie, favMovies }: Props) => {
-  const [showOnlyFavs, setShowOnlyFavs] = useState<boolean>(true);
+  const [showOnlyFavs, setShowOnlyFavs] = useState<boolean>(false);
   
 
   const handleToggleView = ()=> {
