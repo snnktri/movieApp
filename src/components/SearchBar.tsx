@@ -35,6 +35,7 @@ const SearchBar = ({setSearchResult}:Props) => {
             }
           ));
           setSearchResult(data);
+          setSearchTxt('');
       } else {
           throw new Error(res.data.Error || "Movies not found");//setting errors with default
       }
@@ -52,6 +53,7 @@ const SearchBar = ({setSearchResult}:Props) => {
   return (
     <div className="w-[40%] flex items-center flex-col">
       <form onSubmit={handleSubmit} className="">
+        {/* input field */}
         <div>
             <input type="text"
             onChange={handleSearch}
@@ -61,13 +63,14 @@ const SearchBar = ({setSearchResult}:Props) => {
         focus:ring-1 focus:ring-blue-500
         placeholder:text-gray-800 shadow-xl" />
         </div>
+        {/* button for form submit */}
         <button type="submit"
         className="mt-4 w-80 text-center bg-blue-600 py-2 rounded-md hover:bg-blue-700
          hover:scale-105 cursor-pointer transition-all" disabled={loading}>
           {loading ? "Searching..." : "Search Movie"}
           </button>
       </form>
-      
+      {/* funtion to show erros if present */}
     {error && <p className="text-red-500 text-xl mx-auto">{error}</p>}
     </div>
   )

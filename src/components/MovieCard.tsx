@@ -1,8 +1,8 @@
 import type { MovieType } from "../types/movie";
-
+//probs type
 interface Movie {
   movie: MovieType;
-  addMovie?: (movie: MovieType) =>void;
+  addMovie?: (movie: MovieType) =>void;//addMovie is optional cause it will not be in the favMovies
   removeMovie: (movie: MovieType) =>void
 }
 
@@ -29,6 +29,7 @@ const MovieCard = ({ movie, addMovie, removeMovie }: Movie) => {
           <p className="text-gray-500 text-sm">{movie.Year}</p>
         </div>
       </div>
+      {/* button to toggle between addFav and remove from fav */}
       {
         !movie.isFav ? 
         (

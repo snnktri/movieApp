@@ -27,7 +27,10 @@ const Movies = ({ movies, addMovie, removeMovie, favMovies }: Props) => {
     <div className="w-full p-4">
       <div className="flex justify-end mb-4">
         <button
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className={`w-[10rem] py-2 ${!showOnlyFavs ? 'bg-green-500 hover:bg-grreen-600'
+            : ' bg-blue-500 hover:bg-blue-600'} text-white roundeds-sm transition-all
+            ease-in delay-70 duration-100
+            cursor-pointer`}
           onClick={handleToggleView}
         >
           {showOnlyFavs ? "Show All" : "Show Favorites"}

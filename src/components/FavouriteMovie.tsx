@@ -10,6 +10,8 @@ interface Props {//props type
 const FavouriteMovie = ({favMovies, removeMovie}:Props) => {
     //  const moviesFromLocal = localStorage.getItem('movies');
     // const movies: MovieType[] = moviesFromLocal ? JSON.parse(moviesFromLocal) : [];
+
+    // just needed to pass prbos cause i used probs lifting and driling so no use of any funciton here
  
   return (
     <div>
